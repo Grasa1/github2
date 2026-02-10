@@ -11,7 +11,7 @@ namespace github2
 
             foreach(disznok item in diszok)
             {
-                Console.WriteLine(diszok);
+                Console.WriteLine(item);
             }
 
             disznok legidosebb = diszok[0];
@@ -103,28 +103,60 @@ namespace github2
                     lanyhossz += item.age;
                 }
             }
-            Console.WriteLine($"A filanyok atlag kora {lanyhossz / lanyok}");
+            Console.WriteLine($"A lanyok atlag kora {lanyhossz / lanyok}");
             Console.WriteLine("--------------------------");
 
 
-            foreach (disznok item in diszok)
-            {
-                if (item.gender == "kan")
-                {
-                    lanyhossz += item.age;
-                }
-            }
-            Console.WriteLine($"A filanyok atlag kora {lanyhossz / lanyok}");
-            Console.WriteLine("--------------------------");
 
 
             foreach(disznok item in diszok)
             {
-                if (item.name.Length  / 2 == 0)
+                if (item.name.Length  % 2 == 0)
                 {
                     item.Feed();
                 }
             }
+            Console.WriteLine("--------------------------");
+
+
+
+            double atlag2 = 0;
+            foreach (disznok item in diszok)
+            {
+                if (item.age >= 2)
+                {
+                    atlag2++;
+                }
+            }
+            double asd = 0;
+            foreach (disznok item in diszok)
+            {
+                if (item.age >= 2)
+                {
+                    asd += item.weight;
+                }
+            }
+
+
+            Console.WriteLine($"A  2 év fölöttiek atlag sulya {asd/atlag2} kg");
+            Console.WriteLine("--------------------------");
+
+
+
+            foreach (disznok item in diszok)
+            {
+
+            }
+            Console.WriteLine("--------------------------");
+            foreach (disznok item in diszok)
+            {
+                if(item.weight > (fiuhossz / fiuk))
+                {
+                    Console.WriteLine(item);
+                }
+            }
+            Console.WriteLine("--------------------------");
+
 
 
 
